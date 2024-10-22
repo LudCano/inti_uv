@@ -43,6 +43,9 @@ ax.set_title(f'Indice UV Cota Cota {dt.datetime.strftime(today, "%d %b %Y")}')
 ax.axhline(16, ls = '--', c = 'k', alpha = .35)
 
 
+last_point = dt.datetime.strftime(today_data.datetime.max(), 'Último dato: %H:%M')
+ax.annotate(last_point, xy=(0.83, 0.012),xycoords='figure fraction', fontsize=8)
+
 img = mpimg.imread('logo-lfa-original.png') 
 x0im = x0 + dt.timedelta(hours = 2.4)
 xfim = xf + dt.timedelta(hours = -2.4)
