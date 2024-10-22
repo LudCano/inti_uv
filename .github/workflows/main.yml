@@ -1,4 +1,4 @@
-name: CIMEL daily plots
+name: INTI UV Live Plots
 
 on:
   schedule:
