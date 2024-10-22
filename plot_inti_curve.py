@@ -5,6 +5,7 @@ import matplotlib.dates as mdates
 import matplotlib.ticker as tck
 import numpy as np
 import matplotlib.image as mpimg
+import os
 
 today = dt.datetime.now()
 today_date = today.date()
@@ -21,7 +22,8 @@ lims = [0,4,6.5,9,13,20]
 lims = [0,3,6,8,11,20]
 clrs = ['green','yellow','orange','red','blueviolet']
 
-
+if os.path.exists('inti_plot.png'):
+    os.remove('inti_plot.png')
 
 fig, ax = plt.subplots()
 ax.plot(today_data.datetime, today_data.iuv, c = 'k')
