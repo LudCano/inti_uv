@@ -7,8 +7,8 @@ import numpy as np
 import os
 
 
-if os.path.exists('inti_mes.png'):
-    os.remove('inti_mes.png')
+#if os.path.exists('inti_mes.png'):
+#    os.remove('inti_mes.png')
 
 today = dt.datetime.now()
 month_ago = dt.datetime.now() - dt.timedelta(days = 30)
@@ -67,3 +67,4 @@ ax.grid(which='both')
 ax.set_ylabel('Hora Local', fontsize=13)
 ax.set_title('Índice Ultravioleta Cota Cota', fontsize=15)
 fig.savefig('inti_mes.png', dpi = 300)
+print('Figura matriz generada')
