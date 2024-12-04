@@ -30,7 +30,7 @@ jobs:
           python plot_inti_curve.py  # Curva diaria
       - name: Run plotting script
         run: |
-          python plot_inti_mtx_hrly.py    # Matriz diaria mensual
+          #python plot_inti_mtx_hrly.py    # Matriz diaria mensual
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
