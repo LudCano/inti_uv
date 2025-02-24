@@ -18,8 +18,8 @@ df['datetime'] = pd.to_datetime(df.datetime, format = '%d/%m/%Y %H:%M')
 df['date'] = df.datetime.dt.date
 today_data = df[df.date == today_date]
 
-lims = [0,4,6.5,9,13,20]
-lims = [0,3,6,8,11,20]
+lims = [0,4,6.5,9,13,24]
+lims = [0,3,6,8,11,24]
 clrs = ['green','yellow','orange','red','blueviolet']
 
 if os.path.exists('inti_plot.png'):
@@ -49,7 +49,7 @@ ax.annotate(last_point, xy=(0.83, 0.012),xycoords='figure fraction', fontsize=8)
 img = mpimg.imread('logo-lfa-original.png') 
 x0im = x0 + dt.timedelta(hours = 2.4)
 xfim = xf + dt.timedelta(hours = -2.4)
-plt.imshow(img, extent=[x0im,xfim, 2, 18], aspect='auto', alpha=0.15)
+plt.imshow(img, extent=[x0im,xfim, 2, 22], aspect='auto', alpha=0.15)
 fig.savefig('inti_plot.png',dpi=300)
 plt.show()
 
