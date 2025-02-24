@@ -28,7 +28,7 @@ if os.path.exists('inti_plot.png'):
 fig, ax = plt.subplots()
 ax.plot(today_data.datetime, today_data.iuv, c = 'k')
 ax.set_xlim(x0, xf)
-ax.set_ylim(0,20)
+ax.set_ylim(0,24)
 ax.set_yticks(np.arange(0,21,5))
 ax.yaxis.set_minor_locator(tck.MultipleLocator(1))
 ax.grid(which='minor', alpha = .35)
